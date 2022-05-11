@@ -31,6 +31,10 @@ async function main() {
     await client.connect();
     console.log('Connected successfully to server');
 
+ 
+    // Make the appropriate DB calls
+    await  listDatabases(client);
+
     // Make the appropriate DB calls
 
 //    } finally {
