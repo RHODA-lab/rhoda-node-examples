@@ -17,6 +17,7 @@ async function main() {
     const url = bindings.url + '?retryWrites=true&w=majority';
     console.log('check url');
     console.log(url);
+    console.log(bindings.connectionOptions);
 
     
     /**
