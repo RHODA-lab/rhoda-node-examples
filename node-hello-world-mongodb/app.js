@@ -15,6 +15,9 @@ async function main() {
      * See https://docs.mongodb.com/drivers/node/ for more details
      */
     const url = bindings.url + '?retryWrites=true&w=majority';
+    console.log('check url');
+    console.log(url);
+
     
     /**
      * The Mongo Client you will use to interact with your database
