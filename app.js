@@ -6,6 +6,8 @@ try {
     // check if the deployment has been bound to a pg instance through
     // service bindings. If so use that connect info
     bindings = serviceBindings.getBinding('MONGODB', 'mongodb');
+    console.log('check bindings');
+    console.log(bindings);
 } catch (err) { // proper error handling here
 };
 
@@ -15,6 +17,8 @@ async function main() {
      * See https://docs.mongodb.com/drivers/node/ for more details
      */
     const url = bindings.url + '?retryWrites=true&w=majority';
+    console.log('check url');
+    console.log(url);
     
     /**
      * The Mongo Client you will use to interact with your database
@@ -24,6 +28,8 @@ async function main() {
      * const client =  new MongoClient(uri, {useUnifiedTopology: true})
      */
     const client = new MongoClient(url, bindings.connectionOptions);
+    console.log('check client');
+    console.log(client);
 
 //    try {
 
