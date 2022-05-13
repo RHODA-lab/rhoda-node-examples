@@ -28,7 +28,7 @@ async function main() {
      * pass option { useUnifiedTopology: true } to the MongoClient constructor.
      * const client =  new MongoClient(uri, {useUnifiedTopology: true})
      */
-    MongoClient.connect(url, bindings.connectionOptions, function(err, db) {
+    await MongoClient.connect(url, bindings.connectionOptions, function(err, db) {
                                    if (err) {
                                         console.log(err);
                                         console.log(url);
