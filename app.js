@@ -35,7 +35,9 @@ async function main() {
                                         console.log(bindings.connectionOptions);
                                     } else {
                                         _db = db;
+                                        console.log(db);
                                     }
+console.log(_db);
 });
     console.log('check client');
     //console.log(client);
