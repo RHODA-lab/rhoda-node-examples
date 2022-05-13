@@ -38,7 +38,8 @@ async function main() {
                                     }
 });
     console.log('check client');
-    console.log(client);
+    //console.log(client);
+    console.log(_db);
 
 //    try {
 
