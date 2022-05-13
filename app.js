@@ -28,14 +28,13 @@ async function main() {
      * pass option { useUnifiedTopology: true } to the MongoClient constructor.
      * const client =  new MongoClient(uri, {useUnifiedTopology: true})
      */
-    await MongoClient.connect(url, bindings.connectionOptions, function(err, db) {
+    MongoClient.connect(url, bindings.connectionOptions, function(err, db) {
                                    if (err) {
                                         console.log(err);
                                         console.log(url);
                                         console.log(bindings.connectionOptions);
                                     } else {
                                         _db = db;
-                                        console.log(db);
                                     }
 console.log(_db);
 listDatabases(_db);
