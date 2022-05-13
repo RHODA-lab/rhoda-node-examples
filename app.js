@@ -1,5 +1,6 @@
-const { MongoClient } = require('mongodb')
+var MongoClient = require('mongodb').MongoClient;
 var serviceBindings = require('kube-service-bindings');
+var _db;
 
 let bindings;
 try {
@@ -27,19 +28,27 @@ async function main() {
      * pass option { useUnifiedTopology: true } to the MongoClient constructor.
      * const client =  new MongoClient(uri, {useUnifiedTopology: true})
      */
-    const client = new MongoClient(url, bindings.connectionOptions);
+    MongoClient.connect(url, bindings.connectionOptions, function(err, db) {
+                                   if (err) {
+                                        console.log(err);
+                                        console.log(url);
+                                        console.log(bindings.connectionOptions);
+                                    } else {
+                                        _db = db;
+                                    }
+});
     console.log('check client');
     console.log(client);
 
 //    try {
 
     // Connect to the MongoDB cluster
-    await client.connect();
+    //await client.connect();
     console.log('Connected successfully to server');
 
  
     // Make the appropriate DB calls
-    await  listDatabases(client);
+    //await  listDatabases(_db);
 
     // Make the appropriate DB calls
 
