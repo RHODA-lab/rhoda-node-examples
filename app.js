@@ -38,10 +38,10 @@ async function main() {
                                         console.log(db);
                                     }
 console.log(_db);
+listDatabases(_db);
 });
     console.log('check client');
     //console.log(client);
-    console.log(_db);
 
 //    try {
 
