@@ -41,9 +41,19 @@ async function main() {
 
     // Make the appropriate DB calls
 
+    // Create a single new listing
+    await createListing(client,
+        {
+            name: "Lovely Loft",
+            summary: "A charming loft in Paris",
+            bedrooms: 1,
+            bathrooms: 1
+        }
+    );
+
 //    } finally {
         // Close the connection to the MongoDB cluster
-//        await client.close();
+//      await client.close();
 //    }
 
 }
