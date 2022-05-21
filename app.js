@@ -86,3 +86,8 @@ async function listDatabases(client) {
     databasesList.databases.forEach(db => console.log(` - ${db.name}`));
 };
 
+async function createListing(client, newListing){
+    // See https://mongodb.github.io/node-mongodb-native/3.6/api/Collection.html#insertOne for the insertOne() docs
+    const result = await client.db("pacman").collection("pacman").insertOne(newListing);
+    console.log(`New listing created with the following id: ${result.insertedId}`);
+}
