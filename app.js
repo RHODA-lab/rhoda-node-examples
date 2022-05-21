@@ -40,7 +40,7 @@ console.log(_db);
 listDatabases(_db);
     // Create a single new listing
     console.log('add to collection');
-    await createListing(_db,
+    createListing(_db,
         {
             name: "Lovely Loft",
             summary: "A charming loft in Paris",
