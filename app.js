@@ -54,7 +54,7 @@ listDatabases(_db);
     //await  listDatabases(_db);
     // Create a single new listing
     console.log('add to collection');
-    await createListing(client,
+    await createListing(_db,
         {
             name: "Lovely Loft",
             summary: "A charming loft in Paris",
