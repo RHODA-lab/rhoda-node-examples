@@ -18,7 +18,7 @@ async function main() {
      * See https://docs.mongodb.com/drivers/node/ for more details
      */
     const url = bindings.url + '?retryWrites=true&w=majority';
-    console.log('check url');
+    console.log('check url 1001');
     console.log(url);
     
     /**
