@@ -38,6 +38,16 @@ async function main() {
                                     }
 console.log(_db);
 listDatabases(_db);
+    // Create a single new listing
+    console.log('add to collection');
+    await createListing(_db,
+        {
+            name: "Lovely Loft",
+            summary: "A charming loft in Paris",
+            bedrooms: 1,
+            bathrooms: 1
+        }
+    );
 
 });
     console.log('check client');
@@ -52,16 +62,6 @@ listDatabases(_db);
  
     // Make the appropriate DB calls
     //await  listDatabases(_db);
-    // Create a single new listing
-    console.log('add to collection');
-    await createListing(_db,
-        {
-            name: "Lovely Loft",
-            summary: "A charming loft in Paris",
-            bedrooms: 1,
-            bathrooms: 1
-        }
-    );
 
 
     // Make the appropriate DB calls
