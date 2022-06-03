@@ -12,6 +12,16 @@ try {
 } catch (err) { // proper error handling here
 };
 
+let bindings2;
+try {
+    // check if the deployment has been bound to a pg instance through
+    // service bindings. If so use that connect info
+    bindings2 = serviceBindings.getBinding('POSTGRESQL', 'pg');
+    console.log('check bindings');
+    console.log(bindings2);
+} catch (err) { // proper error handling here
+};
+
 async function main() {
     /**
      * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
